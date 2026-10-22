@@ -1,0 +1,10 @@
+{
+  "name": "mergeharbor",
+  "version": "0.1.0",
+  "description": "MergeHarbor code review in Claude Code: review changes before you push, fix review findings, and check a branch's review.",
+  "author": { "name": "MergeHarbor", "url": "https://mergeharbor.com" },
+  "homepage": "https://mergeharbor.com/docs/ide-and-agents/",
+  "repository": "https://github.com/mergeharbor/integrations",
+  "license": "Proprietary",
+  "keywords": ["code-review", "mergeharbor", "pull-requests", "mcp"]
+}

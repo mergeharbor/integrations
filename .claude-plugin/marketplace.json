@@ -1,0 +1,12 @@
+{
+  "name": "mergeharbor",
+  "owner": { "name": "MergeHarbor", "url": "https://mergeharbor.com" },
+  "metadata": { "description": "MergeHarbor plugins for coding agents" },
+  "plugins": [
+    {
+      "name": "mergeharbor",
+      "source": "./integrations/claude-code",
+      "description": "Review changes before you push, fix review findings until the review is clean, and check a branch's review."
+    }
+  ]
+}

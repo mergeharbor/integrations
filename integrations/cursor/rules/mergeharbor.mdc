@@ -1,0 +1,12 @@
+---
+description: Review with MergeHarbor before pushing, and work through MergeHarbor findings
+alwaysApply: false
+---
+
+- Before pushing or opening a pull request, run `mh review --committed` in the terminal (or
+  `mh review` for uncommitted work) and fix findings at `major` or above.
+- When asked to fix MergeHarbor comments, use the `mergeharbor` MCP tools: `list_unaddressed`
+  or `fix_all_plan` to collect findings, `apply_fix` for suggested changes. Fix the most
+  severe first, run the tests, then re-run `mh review --fail-on minor` until it passes, for
+  at most three rounds.
+- Follow the review rules in the repository's `.mergeharbor/rules.md` files.

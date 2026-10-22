@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mergeharbor": {
+      "type": "http",
+      "url": "https://app.mergeharbor.com/mcp"
+    }
+  }
+}

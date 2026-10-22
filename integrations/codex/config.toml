@@ -1,0 +1,5 @@
+# Add to ~/.codex/config.toml. Uses the mh command-line client (`mh login` first), which
+# forwards to the MergeHarbor MCP server with your stored key.
+[mcp_servers.mergeharbor]
+command = "mh"
+args = ["mcp"]
