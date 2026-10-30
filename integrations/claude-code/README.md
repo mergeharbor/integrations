@@ -82,10 +82,22 @@ Reading findings, reviews, risk and docs through the MCP server uses no credits.
   being fixed so the patch fits your copy. Other tools send only repository names, pull request
   numbers, branch names, finding ids, your questions' search terms and, for `shipyard_start`,
   the task instructions you confirmed.
-- **Sign-in.** OAuth 2.1 with PKCE: you sign in through your browser and approve the client for
-  one organization. Access tokens are short-lived, refresh tokens rotate, and you can revoke a
-  session at any time in the MergeHarbor console. The plugin contains no credentials and reads
-  none from your environment.
+- **Sign-in.** The plugin contains no credentials. It uses two sign-ins, and neither one
+  passes through the plugin:
+  - **MCP server.** OAuth 2.1 with PKCE. You sign in through your browser and approve the
+    client for one organization. Access tokens are short-lived and refresh tokens rotate. You
+    can revoke a session at any time in the MergeHarbor console.
+  - **Local reviews.** `review-my-changes` runs `mh review`, and `start-shipyard-task` runs
+    `mh whoami` to find your organization. Both use the `mh` client's own sign-in. `mh login`
+    approves the client in your browser and gives it an organization API key with your role.
+    The key is listed in Settings → API keys and expires after 90 days. The `mh` client
+    stores it in your user config directory with mode 0600
+    (`~/.config/mergeharbor/credentials.json` on Linux). `MERGEHARBOR_API_KEY`,
+    `MERGEHARBOR_URL` and `MERGEHARBOR_ORG` override it if you set them. `mh` sends the key
+    only to the MergeHarbor API, to authenticate its requests: the review upload described
+    above, and `mh whoami`'s lookup of your organization. The skills never read the key,
+    print it or pass it to Claude. `mh logout` removes it, and you can revoke it in the
+    console.
 - **Permissions.** Every tool acts as you, with your role's permissions, single sign-on and IP
   allow list rules. Tools that change state are marked as such, and the skills ask before using
   them. The skills never commit, push, merge or override the merge gate.

@@ -1,7 +1,7 @@
 {
   "name": "mergeharbor",
   "displayName": "MergeHarbor",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "MergeHarbor code review in Claude: review your changes before you push, understand and fix review findings, ask questions about your codebase with sources, start Shipyard coding tasks, and check whether a pull request is ready to merge.",
   "author": {
     "name": "MergeHarbor",
