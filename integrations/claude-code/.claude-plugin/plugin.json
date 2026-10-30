@@ -1,10 +1,26 @@
 {
   "name": "mergeharbor",
-  "version": "0.1.0",
-  "description": "MergeHarbor code review in Claude Code: review changes before you push, fix review findings, and check a branch's review.",
-  "author": { "name": "MergeHarbor", "url": "https://mergeharbor.com" },
-  "homepage": "https://mergeharbor.com/docs/ide-and-agents/",
+  "displayName": "MergeHarbor",
+  "version": "1.1.0",
+  "description": "MergeHarbor code review in Claude: review your changes before you push, understand and fix review findings, ask questions about your codebase with sources, start Shipyard coding tasks, and check whether a pull request is ready to merge.",
+  "author": {
+    "name": "MergeHarbor",
+    "email": "support@mergeharbor.com",
+    "url": "https://mergeharbor.com"
+  },
+  "homepage": "https://mergeharbor.com",
   "repository": "https://github.com/mergeharbor/integrations",
-  "license": "Proprietary",
-  "keywords": ["code-review", "mergeharbor", "pull-requests", "mcp"]
+  "license": "LicenseRef-MergeHarbor-Terms",
+  "keywords": [
+    "code-review",
+    "pull-requests",
+    "merge-gate",
+    "coding-agent",
+    "knowledge-base"
+  ],
+  "icon": "./assets/icon.svg",
+  "documentationUrl": "https://mergeharbor.com/docs/ide-and-agents",
+  "supportUrl": "https://mergeharbor.com/contact",
+  "privacyPolicyUrl": "https://mergeharbor.com/legal/privacy",
+  "termsOfServiceUrl": "https://mergeharbor.com/legal/terms"
 }

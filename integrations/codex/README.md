@@ -15,7 +15,8 @@
 3. Copy the prompts so `/mergeharbor-review` and `/mergeharbor-fix` are available:
 
    ```sh
-   mkdir -p ~/.codex/prompts && cp prompts/*.md ~/.codex/prompts/
+   git clone --depth 1 https://github.com/mergeharbor/integrations /tmp/mergeharbor
+   mkdir -p ~/.codex/prompts && cp /tmp/mergeharbor/integrations/codex/prompts/*.md ~/.codex/prompts/
    ```
 
 4. Optional: append [`AGENTS.md`](AGENTS.md) to your repository's `AGENTS.md` so Codex reviews
